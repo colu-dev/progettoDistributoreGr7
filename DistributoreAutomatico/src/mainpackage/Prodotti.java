@@ -24,5 +24,5 @@ public Prodotti(String nome,double prezzo,int quantita) {
 		public boolean Isdisponibile() {
 			return disponibile;
 		}
-		public static void main(String[] args) {}
+		
 }
