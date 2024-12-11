@@ -16,6 +16,7 @@ public class DistributoreBevande {
 	int eta=0;
 	double prezzo=0;
 	double soldi=5;
+	String risposta;
 	System.out.print("Inserisci codice: 1clienti,2operatore,3stampa ");
 	codice=scanner.nextInt();
 	if(codice==1) {
@@ -24,50 +25,55 @@ public class DistributoreBevande {
 		int codbevanda=scanner.nextInt();
 		switch(codbevanda) {
 		case 1:
-			 prezzo=2.00;
+			 
 			System.out.println("Hai scelto "+bevande[0]+",prezzo:2.00€");
-			if(soldi>=prezzo) {
+			if(soldi>=prezzi[0][0]) {
 				System.out.println("Erogazione in corso");
 				prodotti[0][0]--;
-				resto=soldi-prezzo;
+				soldi=soldi-prezzi[0][0];
+				System.out.println("Vuoi stampare lo scontrino?");
+				risposta=scanner.nextLine();
+				if(risposta.equals("si")) {
+					
+				}
 			}else 
 				System.out.println("Caccia du piotte");
 			
 			break;
 		case 2:
-			// prezzo=2.00;
+			
 			System.out.println("Hai scelto "+bevande[1]+",prezzo:2.00€");
-			if(soldi>=prezzo) {
+			if(soldi>=prezzi[0][1]) {
 				System.out.println("Erogazione in corso");
 				prodotti[0][1]--;
-				resto=soldi-prezzo;
+				soldi=soldi-prezzi[0][1];
 			}else 
 				System.out.println("Caccia du piotte");
 			break;
 		case 3:
 			System.out.println("Hai scelto "+bevande[2]+",prezzo:1.00€");
-			if(soldi>=prezzo) {
+			if(soldi>=prezzi[0][2]) {
 				System.out.println("Erogazione in corso");
 				prodotti[0][2]--;
-				resto=soldi-prezzo;
+				soldi=soldi-prezzi[0][2];
 			}else 
 				System.out.println("Caccia du piotte");
 			break;
 		case 4:
 			System.out.println("Hai scelto "+bevande[3]+",prezzo:0.70€");
-			if(soldi>=prezzo) {
+			if(soldi>=prezzi[1][0]) {
 				System.out.println("Erogazione in corso");
 				prodotti[1][0]--;
-				resto=soldi-prezzo;
+				soldi=soldi-prezzi[1][0];
 			}else 
 				System.out.println("Caccia du piotte");
 			break;
 		case 5:
 			System.out.println("Hai scelto "+bevande[4]+",prezzo:2.00€");
-			if(soldi>=prezzo) {
+			if(soldi>=prezzi[1][1]) {
 				System.out.println("Erogazione in corso");
 				prodotti[1][1]--;
-				resto=soldi-prezzo;
+				soldi=soldi-prezzi[1][1];
 			}else 
 				System.out.println("Caccia du piotte");
 			break;
@@ -75,15 +81,15 @@ public class DistributoreBevande {
 			System.out.println("Hai scelto "+bevande[5]+",prezzo:2.30€");
 			System.out.println("Inserire tessera sanitaria");
 			eta=(int)(Math.random()*93+8);
-			prezzo=2.30;
 			System.out.println(eta);
-			if(soldi>=prezzo && eta>=18) {
+			if(soldi>=prezzi[1][2] && eta>=18) {
 				System.out.println("Erogazione in corso");
 				prodotti[1][2]--;
-				resto=soldi-prezzo;
+				System.out.println(prodotti);
+				soldi=soldi-prezzi[1][2];
 			}else if(eta<18) {
 				System.out.println("Sei minorenne");
-			}else if(soldi<prezzo) {
+			}else if(soldi<prezzi[1][2]) {
 				System.out.println("Caccia du piotte");
 			}
 				
@@ -93,13 +99,13 @@ public class DistributoreBevande {
 			eta=(int)(Math.random()*93+8);
 			
 			System.out.println(eta);
-			if(soldi>=prezzo && eta>=18) {
+			if(soldi>=prezzi[2][0] && eta>=18) {
 				System.out.println("Erogazione in corso");
 				prodotti[2][0]--;
-				resto=soldi-prezzo;
+				soldi=soldi-prezzi[2][0];
 			}else if(eta<18) {
 				System.out.println("Sei minorenne");
-			}else if(soldi<prezzo) {
+			}else if(soldi<prezzi[2][0]) {
 				System.out.println("Caccia du piotte");
 			}
 			break;
@@ -108,13 +114,13 @@ public class DistributoreBevande {
 			eta=(int)(Math.random()*93+8);
 			
 			System.out.println(eta);
-			if(soldi>=prezzo && eta>=18) {
+			if(soldi>=prezzi[2][1] && eta>=18) {
 				System.out.println("Erogazione in corso");
 				prodotti[2][1]--;
-				resto=soldi-prezzo;
+				soldi=soldi-prezzo;
 			}else if(eta<18) {
 				System.out.println("Sei minorenne");
-			}else if(soldi<prezzo) {
+			}else if(soldi<prezzi[2][1]) {
 				System.out.println("Caccia du piotte");
 			}
 			break;
@@ -123,13 +129,13 @@ public class DistributoreBevande {
 			eta=(int)(Math.random()*93+8);
 			
 			System.out.println(eta);
-			if(soldi>=prezzo && eta>=18) {
+			if(soldi>=prezzi[2][2] && eta>=18) {
 				System.out.println("Erogazione in corso");
 				prodotti[2][2]--;
-				resto=soldi-prezzo;
+				soldi=soldi-prezzi[2][2];
 			}else if(eta<18) {
 				System.out.println("Sei minorenne");
-			}else if(soldi<prezzo) {
+			}else if(soldi<prezzi[2][2]) {
 				System.out.println("Caccia du piotte");
 			}
 			break;
