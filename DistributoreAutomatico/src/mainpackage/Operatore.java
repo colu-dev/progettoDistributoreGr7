@@ -1,7 +1,7 @@
 package mainpackage;
 
 public class Operatore {
-	public void Aggprod() {
+	public void Aggprod() {//metodi
 		
 	}
 	public static void Rimuovi() {
