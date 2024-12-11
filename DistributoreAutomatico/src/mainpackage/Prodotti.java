@@ -6,7 +6,7 @@ private String nome;
 private int quantita;
 boolean disponibile;
 private int quantitaacq;
-
+//Ciao dal branchwiliam
 public Prodotti(String nome,double prezzo,int quantita) {
 	this.nome=nome;
 	this.prezzo=prezzo;
