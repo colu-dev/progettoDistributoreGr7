@@ -1,12 +1,12 @@
 package mainpackage;
 
 public class Prodotti {
-private double prezzo;
-private String nome;
-private int quantita;
-boolean disponibile;
-private int quantitaacq;
-
+	public double prezzo;
+	public String nome;
+	public int quantita;
+	boolean disponibile;
+	public int quantitaacq;
+	Prodotti prodotto1 = new Prodotti(nome, prezzo, quantita); //creato oggetto per l'array della classe 
 public Prodotti(String nome,double prezzo,int quantita) {
 	this.nome=nome;
 	this.prezzo=prezzo;
