@@ -5,7 +5,7 @@ public class Operatore {
 		
 	}
 	public static void Rimuovi() {
-		
+		System.out.println("Ciao");
 	}
 	public static void CambQuant() {
 		
