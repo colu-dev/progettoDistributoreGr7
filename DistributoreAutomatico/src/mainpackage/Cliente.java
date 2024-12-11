@@ -1,6 +1,6 @@
 package mainpackage;
 
-public class Cliente {
+public class Cliente { //ciaoooo
 	int eta=0;
 public static void RichiediBev() {
 	
