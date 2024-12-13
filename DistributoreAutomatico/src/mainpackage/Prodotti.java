@@ -1,28 +1,43 @@
 package mainpackage;
 
 public class Prodotti {
-private double prezzo;
-private String nome;
-private int quantita;
-boolean disponibile;
-private int quantitaacq;
-//Ciao dal branchwiliam
-public Prodotti(String nome,double prezzo,int quantita) {
-	this.nome=nome;
-	this.prezzo=prezzo;
-	this.quantita=quantita;
-}
-	public String Prendinome() {
-	return nome;
+	private double prezzo;
+	private String nome;
+	private double quantita;
+	boolean disponibile;
+	private double quantitaAcquistata;
+	//Ciao dal branchwiliam
+	public Prodotti(String nome,double prezzo,double quantita) {
+		this.nome=nome;
+		this.prezzo=prezzo;
+		this.quantita=quantita;
 	}
-		public double Prendiprezzo() {
+		
+		
+		public String getNome() {
+			return nome;
+		}
+		public double getPrezzo() {
 			return prezzo;
 		}
-		public int Prendiquantita() {
+		public double getQuantita() {
 			return quantita;
 		}
-		public boolean Isdisponibile() {
+		public boolean getDisponibilita() {
 			return disponibile;
 		}
+		public double getQuantitaAcquistata() {
+			return quantitaAcquistata;
+		}
 		
+		public void setPrezzo(double prezzo) {
+			this.prezzo = prezzo;
+		}
+		public void setQuantita(int quantita) {
+			this.quantita = quantita;
+		}
+		@Override 
+		public String toString() {
+			return "Nome: " +nome+ " Prezzo " +prezzo+ " Quantità " +quantita+ " Disponibilità " +disponibile+ " Quantità acquistata " +quantitaAcquistata;
+		}
 }
