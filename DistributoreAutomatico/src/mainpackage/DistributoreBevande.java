@@ -1,4 +1,4 @@
-package mainpackage;
+/*package mainpackage;
 import java.util.Scanner;
 import java.util.ArrayList;
 public class DistributoreBevande {
@@ -219,3 +219,4 @@ public class DistributoreBevande {
 	}
 	}
 	}
+*/
