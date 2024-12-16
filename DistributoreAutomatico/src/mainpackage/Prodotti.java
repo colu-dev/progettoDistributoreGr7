@@ -3,17 +3,21 @@ package mainpackage;
 public class Prodotti {
 	private double prezzo;
 	private String nome;
-	private double quantita;
+	private int quantita;
 	boolean disponibile;
 	private double quantitaAcquistata;
-	//Ciao dal branchwiliam
-	public Prodotti(String nome,double prezzo,double quantita) {
+	
+	
+	
+	
+	//Costruttore della classe prodotto	
+	public Prodotti(String nome,double prezzo,int quantita) {
 		this.nome=nome;
 		this.prezzo=prezzo;
 		this.quantita=quantita;
 	}
 		
-		
+		//getter per il nome, prezxo, quantita er disponibilita
 		public String getNome() {
 			return nome;
 		}
@@ -29,7 +33,7 @@ public class Prodotti {
 		public double getQuantitaAcquistata() {
 			return quantitaAcquistata;
 		}
-		
+		//setter per cambiare il prezzo e la quantita
 		public void setPrezzo(double prezzo) {
 			this.prezzo = prezzo;
 		}
