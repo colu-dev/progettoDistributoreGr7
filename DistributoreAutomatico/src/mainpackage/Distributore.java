@@ -56,6 +56,17 @@ import java.util.List;
    				System.out.println(prodotto.getNome()+"<--il prezzo è: " + prodotto.getPrezzo());
    			}
    		}
+   		public void venditaProdotto(String nome, double prezzo, int quantita) {
+   			for(Prodotti prodotto : products) {
+   				if(prodotto.getNome().equalsIgnoreCase(nome)) {
+   					if(prodotto.vendita()) {
+   						System.out.println("Prodotto acquistato: " + nome +"hai pagato:"+ prezzo);
+   					}else {
+   						System.out.println("Prodotto non disponibile o inesistente...");
+   					}
+   				}
+   			}
+   		}
    		   		
    		public void incassoTotale() {
    			System.out.println("Incasso totale del distributore: "+incassoTotale);

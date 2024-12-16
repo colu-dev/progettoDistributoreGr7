@@ -40,6 +40,13 @@ public class Prodotti {
 		public void setQuantita(int quantita) {
 			this.quantita = quantita;
 		}
+		public boolean vendita() {
+			if(quantita> 0) {
+				quantita--;
+				return true;
+			}
+			return disponibile;
+		}
 		@Override 
 		public String toString() {
 			return "Nome: " +nome+ " Prezzo " +prezzo+ " Quantità " +quantita+ " Disponibilità " +disponibile+ " Quantità acquistata " +quantitaAcquistata;
