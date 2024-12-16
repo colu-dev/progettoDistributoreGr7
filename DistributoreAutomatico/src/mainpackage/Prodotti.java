@@ -1,6 +1,6 @@
 package mainpackage;
 
-public class Prodotti {
+public class Prodotti{
 	public double prezzo;
 	public String nome;
 	public int quantita;
@@ -16,9 +16,6 @@ public class Prodotti {
 		public String getNome() {
 			return nome;
 		}
-		public void setNome(String nuovoNome) {
-			nome=nuovoNome;
-			}
 			public double getPrezzo() {
 				return prezzo;
 			}
@@ -27,9 +24,6 @@ public class Prodotti {
 				}
 			public int getQuantita() {
 				return quantita;
-			}
-			public void setQuantita(int quantitaDaAggiungere) {
-				quantita+=quantitaDaAggiungere;
 			}
 			public boolean Isdisponibile() {
 				return disponibile;
@@ -40,7 +34,7 @@ public class Prodotti {
 			public void setQuantitaAcq(int quantitaAcq) {
 				quantitaacq=quantitaAcq;
 				
-			}public void setNuovaQuantita(int nuovaQuantita) {
+			}public void setQuantita(int nuovaQuantita) {
 				quantita=nuovaQuantita;
 			}
 

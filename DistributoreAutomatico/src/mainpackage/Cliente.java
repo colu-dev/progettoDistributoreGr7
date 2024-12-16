@@ -1,13 +1,18 @@
 package mainpackage;
-import java.util.Scanner;
+import java.util.Scanner;/*
 import java.util.ArrayList;
-public class Cliente { //ciaoooo
+public class Cliente extends Prodotti{ 
+	public Cliente(String nome, double prezzo, int quantita) {
+		super(nome, prezzo, quantita);
+		// TODO Auto-generated constructor stub
+	}
 	int eta=0;
 	static double  soldi=0;
-	//static ArrayList<Prodotti> bevande = new ArrayList<>();
+	private static Cliente cliente1 =new Cliente(nome,prezzo,quantita);
+	private static Distributore distributore1 = new Distributore();
 	public static void CompraBev(String nome,double prezzo,int quantita) {
 	
-	/*Prodotti prodotto=new Prodotti(nome,prezzo,quantita);
+	Prodotti prodotto=new Prodotti(nome,prezzo,quantita);
 	Scanner scanner = new Scanner(System.in);
 	System.out.println("Benvenuto cliente");
 	System.out.println("Inserire codice bevanda");
@@ -15,9 +20,9 @@ public class Cliente { //ciaoooo
 	switch(codbevanda) {
 	case 1:
 		System.out.println("Hai scelto "+bevande.get(0)+",prezzo:2.00€");
-		if(soldi>=Prodotti.getPrezzo()) {
+		if(soldi>=prodotto.getPrezzo()) {
 			System.out.println("Erogazione in corso");
-			Prodotti.getQuantita--;
+			prodotto.getQuantita--;
 			resto=soldi-prezzo;
 		}else 
 			System.out.println("Caccia du piotte");
@@ -129,9 +134,9 @@ public class Cliente { //ciaoooo
 		System.exit(0);}
 	
 }
-}*/
 }
 }
-
+}
+*/
 
 //metodo richiedi scontrino?

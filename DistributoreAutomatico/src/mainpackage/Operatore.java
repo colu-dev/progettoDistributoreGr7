@@ -3,56 +3,25 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import mainpackage.Distributore;
 public class Operatore extends Distributore{
-	//static ArrayList<Prodotti> bevande = new ArrayList<>();
+	//private static Distributore distributore = new Distributore();
+	/*public void Aggprod() {
+		
+		Scanner scanner= new Scanner(System.in);
+		System.out.print("Inserisci il nome del prodotto: ");
+		String nome = scanner.nextLine();
+		System.out.print("Inserisci il prezzo del prodotto: ");
+		double prezzo =scanner.nextDouble();
+		System.out.print("Inserisci la quantità disponibile: ");
+		int quantita =scanner.nextInt();
+		distributore.aggiungiProdotto(nome, prezzo, quantita);
+	}*/
+				
 	
-	public void Aggprod() {
-		
-		Scanner scanner= new Scanner(System.in);
-		System.out.println("Inserisci codice operatore");
-	      int codoperatore=scanner.nextInt();
-			if(codoperatore==0001) {
-				System.out.println("Welcome sir");
-				System.out.print("Vuoi aggiungere un prodotto? Premi 1: ");
-				int inputMagazziniere = scanner.nextInt();
-				if (inputMagazziniere == 1) { 
-					System.out.print("In quale posizione vuoi aggiungere un prodotto?");
-					int posizione = scanner.nextInt();
-					if (posizione >= 0 &&  posizione <= bevande.size()) {
-						System.out.print("Quanti prodotti vuoi aggiungere? ");
-							int quantitaDaAggiungere = scanner.nextInt();
-						
-						bevande.get(posizione).setQuantita(quantitaDaAggiungere);
-						
-					}
-				}
-			}
-	}
-	public static void Rimuovi() {
-		Scanner scanner= new Scanner(System.in);
-			System.out.println("Inserisci codice operatore");
-			int codoperatore=scanner.nextInt();
-			if(codoperatore==0002) {
-				System.out.println("Welcome sir");
-				System.out.print("Vuoi rimuovere un prodotto? Premi 1: ");
-				int inputMagazziniere = scanner.nextInt();
-				if (inputMagazziniere == 1) { 
-					System.out.print("In quale posizione vuoi rimuovere un prodotto?");
-					int posizione = scanner.nextInt();
-					if (posizione >= 0 &&  posizione < bevande.size()) {
-						System.out.print("Quanti prodotti vuoi rimuovere? ");
-							int quantitaDaRimuovere = scanner.nextInt();
-					
-							bevande.get(posizione).setQuantita(quantitaDaRimuovere);
-					}
-				}
-			}
-		
-	}
-	public static void CambQuant() {
+	public void CambQuant() {
 		Scanner scanner= new Scanner(System.in);
 		System.out.println("Inserisci codice operatore");
 		int codoperatore=scanner.nextInt();
-		if(codoperatore==0003) {
+		if(codoperatore==0001) {
 			System.out.println("Welcome sir");
 			System.out.print("Vuoi cambiare la quantità di un prodotto? Premi 1: ");
 			int inputMagazziniere = scanner.nextInt();
@@ -62,15 +31,31 @@ public class Operatore extends Distributore{
 				if (posizione >= 0 &&  posizione < bevande.size()) {
 					System.out.print("che quantita vuoi mettere? ");
 						int nuovaQuantita = scanner.nextInt();
-				
-						bevande.get(posizione).setNuovaQuantita(nuovaQuantita);
+				bevande.get(posizione).setQuantita(nuovaQuantita);
 		
-	}
 				}
 			}
 		}
-	public static void CambPrezzo() {
+	}
+	public void CambPrezzo() {
+		Scanner scanner= new Scanner(System.in);
+		System.out.println("Inserisci codice operatore");
+		int codoperatore=scanner.nextInt();
+		if(codoperatore==0002) {
+			System.out.println("Welcome sir");
+			System.out.print("Vuoi cambiare il prezzo di un prodotto? Premi 1: ");
+			int inputMagazziniere = scanner.nextInt();
+			if (inputMagazziniere == 1) { 
+				System.out.print("In quale posizione vuoi cambiare il prezzo di un prodotto?");
+				int posizione = scanner.nextInt();
+				if (posizione >= 0 &&  posizione < bevande.size()) {
+					System.out.print("che quantita vuoi mettere? ");
+						int nuovoPrezzo = scanner.nextInt();
+				bevande.get(posizione).setPrezzo(nuovoPrezzo);
 		
+				}
+			}
+		}
 	}
 	public static void VisualizzaInc() {
 		
