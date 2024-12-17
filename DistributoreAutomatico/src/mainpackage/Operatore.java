@@ -58,7 +58,6 @@ public class Operatore extends Distributore{
 		}
 	}
 	public static void VisualizzaInc() {
-		
 	}
 	public  static void VisualizzaVenduti() {
 		

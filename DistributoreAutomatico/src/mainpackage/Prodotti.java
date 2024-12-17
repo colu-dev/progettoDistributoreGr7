@@ -5,7 +5,7 @@ public class Prodotti{
 	public String nome;
 	public int quantita;
 	boolean disponibile;
-	public int quantitaacq;
+	public int quantitaAcq=0;
 	//Prodotti prodotto1 = new Prodotti(nome, prezzo, quantita);//creato oggetto per l'array della classe 
 	
 	public Prodotti(String nome,double prezzo,int quantita) {
@@ -28,16 +28,22 @@ public class Prodotti{
 			public boolean Isdisponibile() {
 				return disponibile;
 			}
-			public int getQuantitaAcq() {
-				return quantitaacq;
+			public void getQuantitaAcq() {
+				System.out.println(quantitaAcq);
 			}
-			public void setQuantitaAcq(int quantitaAcq) {
-				quantitaacq=quantitaAcq;
+			public void setQuantitaAcq() {
+				 quantitaAcq++;
 				
 			}public void setQuantita(int nuovaQuantita) {
 				quantita=nuovaQuantita;
 			}
-
+			public void quantitaDopoVendita() {
+					if(quantita>0) {
+						quantita--;
+						
+					}
+			
+			}
 }
 /*Partendo dai diagrammi di flusso realizzati in precedenza, programmare il software per la gestione del distributore di bevande.
 

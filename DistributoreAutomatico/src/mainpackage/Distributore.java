@@ -6,9 +6,28 @@ import java.util.Scanner;
 public class Distributore{
 	public static ArrayList<Prodotti> bevande;
 	public double totaleIncassato;
+	public static Prodotti prodotto1 = new Prodotti("coca-cola",2.00,10);
+	public static Prodotti prodotto2 = new Prodotti("fanta",2.00,10);
+	public static Prodotti prodotto3 = new Prodotti("caffe",1.00,10);
+	public static Prodotti prodotto4 = new Prodotti("acqua",0.70,10);
+	public static Prodotti prodotto5 = new Prodotti("thè",2.00,10);
+	public static Prodotti prodotto6 = new Prodotti("birra",2.30,10);
+	public static Prodotti prodotto7 = new Prodotti("campari soda",2.50,10);
+	public static Prodotti prodotto8 = new Prodotti("molinari",1.50,10);
+	public static Prodotti prodotto9 = new Prodotti("grappino",1.50,10);
+	
 	
 	public Distributore() {
 		this.bevande = new ArrayList<>();
+		bevande.add(prodotto1);
+		bevande.add(prodotto2);
+		bevande.add(prodotto3);
+		bevande.add(prodotto4);
+		bevande.add(prodotto5);
+		bevande.add(prodotto6);
+		bevande.add(prodotto7);
+		bevande.add(prodotto8);
+		bevande.add(prodotto9);
 		this.totaleIncassato = 0;
 	}
 	
