@@ -5,13 +5,14 @@ public class Prodotti{
 	public String nome;
 	public int quantita;
 	boolean disponibile;
-	public int quantitaAcq=0;
+	public int quantitaAcq;
 	//Prodotti prodotto1 = new Prodotti(nome, prezzo, quantita);//creato oggetto per l'array della classe 
 	
 	public Prodotti(String nome,double prezzo,int quantita) {
 	this.nome=nome;
 	this.prezzo=prezzo;
 	this.quantita=quantita;
+	this.quantitaAcq=0;
 	}
 		public String getNome() {
 			return nome;
@@ -29,10 +30,10 @@ public class Prodotti{
 				return disponibile;
 			}
 			public void getQuantitaAcq() {
-				System.out.println(quantitaAcq);
+				System.out.println(this.quantitaAcq);
 			}
 			public void setQuantitaAcq() {
-				 quantitaAcq++;
+				 this.quantitaAcq=quantitaAcq+1;
 				
 			}public void setQuantita(int nuovaQuantita) {
 				quantita=nuovaQuantita;

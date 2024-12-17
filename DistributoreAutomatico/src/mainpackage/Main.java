@@ -55,7 +55,9 @@ public class Main {
             	ciro.CambPrezzo();
             break;
             case 5:
-            	myprodotto.getQuantitaAcq();
+            	for(Prodotti prodotto:distributore1.bevande) {
+            	distributore1.bevande.get(i).getQuantitaAcq();	
+            	}
             break;
             case 6:
             	io.stampaTotaleIncassato();
