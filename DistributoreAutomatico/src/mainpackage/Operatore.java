@@ -63,7 +63,7 @@ public class Operatore {
         System.out.println("Totale incassato: " + totaleIncasso + " €");
     }
 
-    public static void VisualizzaVenduti(ArrayList<Prodotti> listaProdotti) {
+    public Operatore(ArrayList<Prodotti> listaProdotti) {
         System.out.println("Elenco dei prodotti venduti:");
         for (Prodotti prodotto : listaProdotti) {
             int quantitaVenduta = prodotto.getQuantitaAcquistata();

@@ -15,7 +15,7 @@ public class DistributoreBevande {
         double resto = 0;
         double prezzo = 0;
         double soldi = 0;
-
+       
         System.out.print("Inserisci codice: \n1) Clienti. \n2) Operatore. \n3) Stampa. ");
         codice = scanner.nextInt();
 
@@ -227,7 +227,7 @@ public class DistributoreBevande {
                         System.out.println("Erogazione in corso");
                         prodotti[2][2]--;
                         resto = soldi - prezzo;
-                        System.out.println("resto: " + resto + "€");
+                        System.out.println("resto: " + resto + "€" );
                   
                     } else if (soldi < prezzo) {
                         System.out.println("importo insufficienti!");
@@ -237,17 +237,24 @@ public class DistributoreBevande {
                             System.out.println("Erogazione in corso");
                             prodotti[2][0]--;
                             resto = soldi - prezzo;
-                            System.out.println("resto: " + resto + "€");
-                        } else if (soldi < prezzo) {
+                            System.out.println("resto: " + resto + "€" );
+                         } else if (soldi < prezzo) {
+                        	
                         	
                         }
+                        
                     }
                     break;
                 default:
                     System.out.println("Codice bevanda errato!");
                     break;
+                    
             }
         } else if (codice == 2) {
+        	System.out.println("Inserisci codice operatore");
+        	int codiceOperatore= 0001;
+        	codiceOperatore=scanner.nextInt();
+        	if(codiceOperatore==0001) {
           System.out.println("msa msa y zmili!! dimmi tutto?");
           System.out.println("1) aggiungere un prodotto.");
           System.out.println("2) rimuovere prodotto.");
@@ -259,7 +266,7 @@ public class DistributoreBevande {
             System.out.println("Codice errato.");
         }
 
-       
+        }
     }
 }
 
