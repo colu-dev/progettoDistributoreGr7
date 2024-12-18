@@ -1,6 +1,5 @@
 package mainpackage;
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class Main {
 	
@@ -8,16 +7,15 @@ public class Main {
 	
 
 	public static void main(String[] args) {
-		int codice;
-	
+		//creazione oggetti
 		Scanner scanner= new Scanner(System.in);
-		Cliente io = new Cliente();
-		Operatore ciro = new Operatore();
+		Cliente io = new Cliente();			
+		Operatore myoperatore = new Operatore();
 		Distributore distributore1 = new Distributore();
 		Prodotti myprodotto = new Prodotti(null,0,0);
-		while(true) {
-		 System.out.print("Inserisci codice: \n1) Clienti. \n2) Operatore. \n3) Esci. ");
-	        codice = scanner.nextInt();
+		while(true) {	//ciclo infinito
+		 System.out.print("Inserisci codice: \n1) Clienti. \n2) Operatore. \n3) Esci. ");	//menu iniziale
+	       int codice = scanner.nextInt();
 
 	        if (codice == 1) {
 	            System.out.println("Benvenuto cliente");
@@ -26,10 +24,9 @@ public class Main {
 	        }
 	            
 	        else if(codice ==2){
-	        	int i=1;
-	        	while(i>0) {
+	        	while(true) { //ciclo infinito
 	        
-            System.out.println("\nMenu:");
+            System.out.println("\nMenu:");		//menu operatore
             System.out.println("1. Aggiungi prodotto");
             System.out.println("2. rimuovi prodotto");
             System.out.println("3. cambia quantita");
@@ -43,30 +40,28 @@ public class Main {
             scanner.nextLine();  // Consuma la nuova linea
             switch(scelta) {
             case 1: 
-            	distributore1.aggiungiProdotto(null, 0, 0);
+            	distributore1.aggiungiProdotto(null, 0, 0);		//richiamo metodo per aggiungere un prodotto
             break;
             case 2:
-            	distributore1.rimuoviProdotto(null);
+            	distributore1.rimuoviProdotto(null);			//richiamo metodo per rimuovere un prodotto
             break;
             case 3:
-            	ciro.CambQuant();
+            	myoperatore.CambQuant();						//richiamo metodo per cambiare la quantita
             break;
             case 4:
-            	ciro.CambPrezzo();
+            	myoperatore.CambPrezzo();						//richiamo metodo per cambiare il prezzo
             break;
             case 5:
-            	for(Prodotti prodotto:distributore1.bevande) {
-            	distributore1.bevande.get(i).getQuantitaAcq();	
-            	}
-            break;
+            	myprodotto.stampaQuantitaAcq();					//richiamo metodo per stampare la quantità acquistata
+             break;
             case 6:
-            	io.stampaTotaleIncassato();
+            	distributore1.StampaQuantitaIncasso();			//richiamo metodo per stampare incasso
             break;
             case 7:
-            	distributore1.visualizzaProdotti();
+            	distributore1.visualizzaProdotti();				//richiamo metodo per visualizzare i prodotti
+            break;
             case 8:
             	System.exit(0);
-            	
             
             }
             
